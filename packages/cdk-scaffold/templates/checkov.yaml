@@ -1,0 +1,13 @@
+branch: master
+directory:
+  - cdk.out/
+download-external-modules: false
+evaluate-variables: true
+external-modules-download-path: .external_modules
+framework:
+  - cloudformation
+output:
+  - junitxml
+output-file-path: ./reports
+skip-check: []
+skip-download: true

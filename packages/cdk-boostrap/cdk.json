@@ -1,0 +1,65 @@
+{
+  "app": "npx ts-node --project=tsconfig.infrastructure.json --prefer-ts-exts infrastructure/bin/run.ts",
+  "context": {
+    "@aws-cdk/core:newStyleStackSynthesis": true,
+    "%ci_account%": {
+      "chatBot": {
+        "name": "cdk-bootstrap-chatbot",
+        "slackWorkspaceId": "%chatbot_slack_workspace_id%",
+        "slackChannelId": "%chatbot_slack_channel_id%"
+      },
+      "codeStarConnection": {
+        "name": "cdk-bootstrap-repos-connection",
+        "provider": "%external_repositories_provider%"
+      },
+      "repositories": {
+        "name": "cdk-bootstrap-repos-secret",
+        "clientId": "%ex_repos_clientId%"
+      },
+      "dockerHubSecret": {
+        "name": "cdk-bootstrap-dockerHub-secret",
+        "username": "%dockerHub_username%"
+      },
+      "npmSecret": {
+        "name": "cdk-bootstrap-npm-secret"
+      },
+      "scaffoldRegions": ["us-east-1", "eu-west-1"],
+      "trustedRoles": [
+        {
+          "account": "%ci_account%",
+          "role": "cdk-hnb659fds-deploy-role-%ci_account%"
+        },
+        {
+          "account": "%stag_account%",
+          "role": "cdk-hnb659fds-deploy-role-%stag_account%"
+        },
+        {
+          "account": "%prod_account%",
+          "role": "cdk-hnb659fds-deploy-role-%prod_account%"
+        }
+      ]
+    },
+    "%stag_account%": {
+      "scaffoldRegions": ["us-east-1", "eu-west-1"],
+      "integrationTestRole": {
+        "name": "cdk-bootstrap-itests-role",
+        "assumedByAccounts": ["%ci_account%"]
+      },
+      "trustedRoles": [
+        {
+          "account": "%stag_account%",
+          "role": "cdk-hnb659fds-deploy-role-%stag_account%"
+        }
+      ]
+    },
+    "%prod_account%": {
+      "scaffoldRegions": ["us-east-1", "eu-west-1"],
+      "trustedRoles": [
+        {
+          "account": "%prod_account%",
+          "role": "cdk-hnb659fds-deploy-role-%prod_account%"
+        }
+      ]
+    }
+  }
+}

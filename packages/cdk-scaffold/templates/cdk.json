@@ -1,0 +1,58 @@
+{
+  "app": "npx ts-node --project=tsconfig.infrastructure.json --prefer-ts-exts infrastructure/bin/create-pipeline.ts",
+  "context": {
+    "@aws-cdk/core:newStyleStackSynthesis": true,
+    "accessLogBucket": {
+      "exportName": "cdk-boostrap-access-logs"
+    },
+    "ci": {
+      "account": "%ci_account%",
+      "region": "eu-west-1",
+      "intergrationTestsRoleArn": "arn:aws:iam::%staging_account%:role/cdk-bootstrap-itests-role",
+      "crossRegionArtifactBuckets": {
+        "eu-west-1": {
+          "bucketArn": {
+            "exportName": "cdk-bootstrap-artifacts-eu-west-1"
+          },
+          "keyArn": {
+            "exportName": "cdk-bootstrap-artifacts-key-eu-west-1"
+          }
+        },
+        "us-east-1": {
+          "bucketArn": {
+            "exportName": "cdk-bootstrap-artifacts-us-east-1"
+          },
+          "keyArn": {
+            "exportName": "cdk-bootstrap-artifacts-key-us-east-1"
+          }
+        }
+      },
+      "logsGroupName": "cdk-bootstrap-codebuild-logs",
+      "dockerSecretName": {
+        "exportName": "cdk-bootstrap-dockerHub-secret"
+      },
+      "chatbotArn": {
+        "exportName": "cdk-bootstrap-chatbot"
+      },
+      "codeStarConnection": {
+        "exportName": "cdk-bootstrap-repos-connection"
+      },
+      "repositoryType": "%repositoryType%"
+    },
+    "stag": {
+      "account": "%staging_account%",
+      "region": "eu-west-1"
+    },
+    "prod": {
+      "account": "%production_account%",
+      "region": "eu-west-1"
+    },
+    "tags": {
+      "product": "%product%",
+      "repository": "%repository%",
+      "team": "%team%",
+      "service": "%service%"
+    },
+    "branch": "%branch%"
+  }
+}

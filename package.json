@@ -1,0 +1,13 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "test": "lerna run test && lerna run cleanup",
+    "build": "lerna run build",
+    "dev": "lerna run dev",
+    "list": "lerna ls"
+  },
+  "devDependencies": {
+    "lerna": "^6.4.1"
+  }
+}
