@@ -7,7 +7,7 @@ echo "Install dependencies..."
 pip3 install checkov==2.0.1155
 
 echo "Creating reports folder..."
-mkdir reports/ &>null
+mkdir -p reports/
 
 echo "Running project tests..."
 npm test
