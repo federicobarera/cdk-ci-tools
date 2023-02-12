@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@federico.barera/cdk-constructs": "^%package_version%",
+    "@federico.barera/cdk-ci-tools-constructs": "^%package_version%",
     "aws-cdk": "2.21.0",
     "aws-cdk-lib": "2.21.0",
     "crypto": "^1.0.1",

@@ -1,5 +1,5 @@
-import * as cdk from "aws-cdk-lib/core";
-import * as kms from 'aws-cdk-lib/aws-kms';
+import * as cdk from "aws-cdk-lib";
+import * as kms from "aws-cdk-lib/aws-kms";
 import { IConstruct } from "constructs";
 
 export class KmsRetentionAspect implements cdk.IAspect {
