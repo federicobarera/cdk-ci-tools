@@ -1,6 +1,6 @@
 {
   "name": "@federico.barera/cdk-ci-tools-constructs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "types": "index.d.ts",
@@ -33,6 +33,8 @@
     "typescript": "~4.5.2"
   },
   "publishConfig": {
-    "directory": "dist"
-  }
+    "directory": "dist",
+    "access": "public"
+  },
+  "gitHead": "863407e919988f86593a2238b13faebe894b8fda"
 }

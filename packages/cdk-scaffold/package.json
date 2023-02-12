@@ -1,6 +1,6 @@
 {
   "name": "@federico.barera/cdk-ci-tools-scaffold",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@federico.barera/cdk-ci-tools-constructs": "^0.0.1",
+    "@federico.barera/cdk-ci-tools-constructs": "^0.1.0",
     "fs-extra": "^10.0.1",
     "lodash": "^4.17.21",
     "prompts": "^2.4.2",
@@ -34,5 +34,9 @@
     "ts-jest": "^27.1.3",
     "ts-node": "^10.4.0",
     "typescript": "~4.5.2"
+  },
+  "gitHead": "863407e919988f86593a2238b13faebe894b8fda",
+  "publishConfig": {
+    "access": "public"
   }
 }

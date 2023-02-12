@@ -1,7 +1,7 @@
 {
   "name": "@federico.barera/cdk-ci-tools-boostrap",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "This project boostraps a 3 accounts setup for continuos integration",
   "main": "boostrap.sh",
   "scripts": {
@@ -17,8 +17,8 @@
     "aws-cdk-lib": "2.21.0",
     "aws-sdk": "^2.1062.0",
     "cdk-remote-stack": "2.0.8",
+    "constructs": "10.0.5",
     "ts-node": "^10.4.0",
-    "typescript": "~4.5.2",
-    "constructs": "10.0.5"
+    "typescript": "~4.5.2"
   }
 }
