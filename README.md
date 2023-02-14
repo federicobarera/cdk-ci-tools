@@ -20,7 +20,7 @@ As of today, the scaffolder creates a CDK CI infrastructure setup within an npx 
 ```
 mkdir tmp && cd tmp
 npm init --yes
-npx @federico.barera/cdk-ci-tools-scaffold@latest
+npx @federico.barera/cdk-ci-tools-scaffolder@latest
 ```
 
 After the initial scaffold you can run either `npm|yarn` to pull the required packages and `npx cdk synth` to run the first synthetisation of the pipeline
