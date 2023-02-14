@@ -1,7 +1,7 @@
 {
   "name": "@federico.barera/cdk-ci-tools-scaffolder-sandbox",
   "private": true,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@federico.barera/cdk-ci-tools-constructs": "^0.1.2",
-    "@federico.barera/cdk-ci-tools-scaffolder": "^0.1.2"
+    "@federico.barera/cdk-ci-tools-constructs": "^0.1.3",
+    "@federico.barera/cdk-ci-tools-scaffolder": "^0.1.3"
   },
   "devDependencies": {
     "@federico.barera/cdk-ci-tools-constructs": "^0.1.1",

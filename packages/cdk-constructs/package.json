@@ -1,6 +1,6 @@
 {
   "name": "@federico.barera/cdk-ci-tools-constructs",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "",
   "main": "index.js",
   "types": "index.d.ts",

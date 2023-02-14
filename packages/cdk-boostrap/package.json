@@ -1,7 +1,7 @@
 {
   "name": "@federico.barera/cdk-ci-tools-boostrap",
   "private": true,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "This project boostraps a 3 accounts setup for continuos integration",
   "main": "boostrap.sh",
   "scripts": {
