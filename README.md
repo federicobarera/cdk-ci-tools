@@ -10,7 +10,7 @@ The `AWS CDK` needs to be installed first in the target accounts. This project a
 
 # Usage
 
-As of today, the scaffolder creates a CDK CI infrastructure setup within an npx project, however it doesn't create/pushes back the project to the source repository. Future versions of the scaffolder will include the option to create the source repository.
+As of today, the scaffolder creates a CDK CI Pipeline within existing projects/repositories; It doesn't create the remote repository (in CodeCommit or Bitbucket) nor directly launches any cdk command to provision the pipeline in the AWS target environment. Future versions of the scaffolder will include the option to create the repository and automatically provision the pipeline.
 
 <img src="docs/scaffold.jpg">
 <br />
@@ -23,7 +23,7 @@ npm init --yes
 npx @federico.barera/cdk-ci-tools-scaffolder@latest
 ```
 
-After the initial scaffold you can run either `npm|yarn` to pull the required packages and `npx cdk synth` to run the first synthetisation of the pipeline
+After the initial scaffold you can run either `npm|yarn` to pull the required packages and `npx cdk deploy --profile ci` to run the first synthetisation / deploy the pipeline.
 
 ## File Structure
 

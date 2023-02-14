@@ -10,11 +10,11 @@
       },
       "codeStarConnection": {
         "name": "cdk-bootstrap-repos-connection",
-        "provider": "%external_repositories_provider%"
+        "provider": "%repositories_provider%"
       },
       "repositories": {
         "name": "cdk-bootstrap-repos-secret",
-        "clientId": "%ex_repos_clientId%"
+        "clientId": "%repositories_clientId%"
       },
       "dockerHubSecret": {
         "name": "cdk-bootstrap-dockerHub-secret",
